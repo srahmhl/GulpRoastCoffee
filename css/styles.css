@@ -2,33 +2,40 @@ body {
   background-color: #082B59;
   margin: 0;
   padding: 0;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   line-height: 2;
 }
-h1, h2, h3 {
-  font-family: 'Poppins', sans-serif;
-}
+
 h1 {
+  font-family: "Poppins", sans-serif;
   font-size: 2rem;
   margin-bottom: 0;
 }
+
+h2, h3 {
+  font-family: "Poppins", sans-serif;
+}
+
 /* make images flexible */
 img {
   max-width: 100%;
 }
+
 a {
   color: #59331d;
 }
 a:hover {
   text-decoration: none;
 }
+
 header {
   border-bottom: 10px solid #d98555;
 }
+
 /* navbar styling */
 nav ul {
-  padding: 0;
   margin: 0;
+  padding: 0;
   list-style-type: none;
   display: flex;
   flex-flow: row wrap;
@@ -36,30 +43,31 @@ nav ul {
 }
 nav li {
   margin: 0 1rem 1rem 1rem;
+  padding: 0;
   font-size: 1.3rem;
 }
-/* max width on the image in pixels */
-nav .logo img {
-  max-width: 150px;
-}
-/* flex basis on the image container, li */
-nav .logo {
+nav .logo { /* flex basis on the image container, li */
   flex-basis: 100%;
   text-align: center;
 }
+nav .logo img {
+  max-width: 150px; /* max width on the image in pixels */
+}
 nav a {
-  color: white;
+  color: #ffffff;
   text-decoration: none;
   display: block;
 }
 nav a:hover {
   color: #d98555;
 }
+
 /* establishes a white background */
 .main-bkgd {
   background: #ffffff url(https://assets.codepen.io/6306176/gulp-bean-bkgd.jpg) repeat-x bottom;
   padding-bottom: 300px;
 }
+
 /* sits inside of the white background, centered */
 .main {
   max-width: 1200px;
@@ -69,29 +77,36 @@ nav a:hover {
   flex-flow: row wrap;
   justify-content: space-between;
 }
+
 article {
   flex-basis: 73%;
 }
+
 picture {
   margin: 3rem 0 0 0;
+  padding: 0;
   flex-basis: 25%;
   background-color: #59331d;
   border-radius: 10px;
 }
+
 figure img {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
+
 figcaption {
   color: #f2f2f2;
+  margin: 0;
   padding: 0.5rem;
 }
+
 .button {
   display: inline-block;
-  background-color: #59331D;
+  background-color: #59331d;
   border-radius: 10px;
-  padding: 0.5rem 1rem;
   margin: 0;
+  padding: 0.5rem 1rem;
   color: #f2f2f2;
   text-decoration: none;
   border: 3px solid #59331d;
@@ -100,6 +115,7 @@ figcaption {
   background-color: #f2f2f2;
   color: #59331d;
 }
+
 footer {
   color: #f2f2f2;
   text-align: center;
@@ -107,8 +123,8 @@ footer {
 }
 footer ul {
   list-style-type: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -118,11 +134,10 @@ footer a {
   font-size: 2rem;
   display: block;
   margin: 0 1rem 3rem 1rem;
+  padding: 0;
 }
 
-/* responsive design section */
-
-@media (max-width: 600px) {
+@media (min-width: 600px) {
   nav ul {
     display: block;
     text-align: center;
@@ -134,17 +149,28 @@ footer a {
   .main {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    column-gap: 1rem;
+    -moz-column-gap: 1rem;
+         column-gap: 1rem;
     row-gap: 1rem;
   }
 }
-
-@media (min-width: 601px) {
+@media (min-width: 720px) {
   .main {
     display: grid;
     box-sizing: border-box;
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 1rem;
+    -moz-column-gap: 1rem;
+         column-gap: 1rem;
     row-gap: 1rem;
   }
 }
+@media (min-width: 900px) {
+  .main {
+    display: grid;
+    box-sizing: border-box;
+    grid-template-columns: repeat(2, 1fr);
+    -moz-column-gap: 1rem;
+         column-gap: 1rem;
+    row-gap: 1rem;
+  }
+}/*# sourceMappingURL=styles.css.map */
