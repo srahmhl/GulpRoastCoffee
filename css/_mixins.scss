@@ -1,0 +1,9 @@
+@mixin space($margin, $padding) {
+    margin: $margin;
+    padding: $padding;
+}
+
+@mixin gap($column-gap, $row-gap) {
+    column-gap: $column-gap;
+    row-gap: $row-gap;
+}

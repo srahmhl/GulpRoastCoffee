@@ -1,0 +1,136 @@
+body {
+    background-color: $backgroundColor;
+    @include space(0,0);
+    font-family: $mainFont;
+    line-height: 2;
+}
+h1 {
+    font-family: $headerFont;
+    font-size: 2rem;
+    margin-bottom: 0;
+}
+h2, h3 {
+    font-family: $headerFont;
+}
+/* make images flexible */
+img {
+    max-width: 100%;
+}
+a {
+    color: $accentColorOne;
+    &:hover {
+        text-decoration: none;
+    }
+}
+header {
+    border-bottom: 10px solid $accentColorTwo;
+}
+/* navbar styling */
+nav {
+    ul {
+        @include space(0,0);
+        list-style-type: none;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+    li {
+        @include space(0 1rem 1rem 1rem,0);
+        font-size: 1.3rem;
+    }
+    .logo { /* flex basis on the image container, li */
+        flex-basis: 100%;
+        text-align: center;
+        img {
+            max-width: 150px; /* max width on the image in pixels */
+        }
+    }
+    a {
+        color: $backgroundColorTwo;
+        text-decoration: none;
+        display: block;
+        &:hover {
+            color: $accentColorTwo;
+        }
+    }
+}
+/* establishes a white background */
+.main-bkgd {
+    background: $backgroundColorTwo url(https://assets.codepen.io/6306176/gulp-bean-bkgd.jpg) repeat-x bottom;
+    padding-bottom: 300px;
+}
+/* sits inside of the white background, centered */
+.main {
+    max-width: 1200px;
+    @include space(0 auto,2rem);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+article {
+    flex-basis: 73%;
+}
+picture {
+    @include space(3rem 0 0 0,0);
+    flex-basis: 25%;
+    background-color: $accentColorOne;
+    border-radius: 10px;
+}
+figure {
+    img {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+}
+figcaption {
+    color: $textColor;
+    @include space(0,0.5rem);
+}
+.button {
+    display: inline-block;
+    background-color: $accentColorOne;
+    border-radius: 10px;
+    @include space(0,0.5rem 1rem);
+    color: $textColor;
+    text-decoration: none;
+    border: 3px solid $accentColorOne;
+    &:hover {
+        background-color: $textColor;
+        color: $accentColorOne;
+    }
+}
+footer {
+    color: $textColor;
+    text-align: center;
+    border-top: 10px solid $accentColorTwo;
+    ul {
+        list-style-type: none;
+        @include space(0,0);
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+    a {
+        color: $textColor;
+        font-size: 2rem;
+        display: block;
+        @include space(0 1rem 3rem 1rem,0);
+    }
+}
+
+@media (min-width: 600px) {
+    nav ul {
+      display: block;
+      text-align: center;
+    }
+    footer ul {
+      display: block;
+      text-align: center;
+    }
+    .main {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      column-gap: 1rem;
+      row-gap: 1rem;
+    }
+  }
